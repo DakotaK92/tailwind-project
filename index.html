@@ -17,18 +17,18 @@
 </head>
 <body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300 min-h-screen">
 
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center w-full px-4 sm:px-6">
     <!--Nav-->
-    <div class="flex justify-between items-center m-5 p-6 w-2/3">
+    <div class="flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl py-6">
       <!-- Left Section-->
-      <div class="px-6">
-        <h1 class="text-4xl font-bold">Social Media Dashboard</h1>
+      <div class="text-center sm:text-left mb-4 sm:mb-0">
+        <h1 class="text-2xl sm:text-4xl font-bold">Social Media Dashboard</h1>
         <p class="text-gray-600 dark:text-gray-400 font-medium">Total Followers: 23,004</p>
       </div>
 
       <!-- Right Section-->
-      <div class="flex m-4 items-center gap-2">
-        <span class="m-2 font-bold text-gray-600 dark:text-gray-200">Dark Mode</span>
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-gray-600 dark:text-gray-200">Dark Mode</span>
         <button id="theme-toggle" 
           class="relative flex bg-gray-300 dark:bg-green-500 w-10 h-6 rounded-full items-center transition-colors hover:cursor-pointer">
           <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform dark:translate-x-2"></span>
@@ -36,175 +36,198 @@
       </div>
     </div>
    
-    <!--Top Content, Facebook-->
-    <div class="flex">
-      <div class="flex flex-wrap justify-between m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-        <div class="flex flex-col w-60 items-center">
-          <div class="bg-blue-600 w-72 h-1 -translate-y-3 flex"></div>
-          <div class="flex flex-row items-center">
-            <img src="./images/icon-facebook.svg" class="w-4 h-4 m-2">
-            <p class="text-sm text-gray-400">@nathanf</p>
-          </div>
-          <h1 class="font-bold text-6xl">1987</h1>
-          <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Followers</p>
-          <div>
-            <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
-            <span class="text-sm text-green-500 font-medium">12 Today</span>
-          </div>
+    <!-- Top Content -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+
+      <!-- Facebook -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700 flex flex-col items-center">
+        <div class="bg-blue-600 w-full h-1 -translate-y-3"></div>
+        <div class="flex items-center">
+          <img src="./images/icon-facebook.svg" class="w-4 h-4 m-2">
+          <p class="text-sm text-gray-400">@nathanf</p>
+        </div>
+        <h1 class="font-bold text-4xl sm:text-5xl lg:text-6xl">1987</h1>
+        <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Followers</p>
+        <div>
+          <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
+          <span class="text-sm text-green-500 font-medium">12 Today</span>
         </div>
       </div>
 
-      <!--Top Content, Twitter-->
-      <div class="flex flex-wrap justify-between m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-        <div class="flex flex-col w-60 items-center">
-          <div class="bg-blue-400 w-72 h-1 -translate-y-3 flex"></div>
-          <div class="flex flex-row items-center">
-            <img src="./images/icon-twitter.svg" class="w-5 h-4 m-2">
-            <h1 class="text-sm text-gray-400">@nathanf</h1>
-          </div>
-          <h1 class="font-bold text-6xl">1044</h1>
-          <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Followers</p>
-          <div>
-            <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
-            <span class="text-sm text-green-500 font-medium">99 Today</span>
-          </div>
+      <!-- Twitter -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700 flex flex-col items-center">
+        <div class="bg-blue-400 w-full h-1 -translate-y-3 flex"></div>
+        <div class="flex items-center">
+          <img src="./images/icon-twitter.svg" class="w-5 h-4 m-2">
+          <h1 class="text-sm text-gray-400">@nathanf</h1>
+        </div>
+        <h1 class="font-bold text-6xl">1044</h1>
+        <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Followers</p>
+        <div>
+          <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
+          <span class="text-sm text-green-500 font-medium">99 Today</span>
         </div>
       </div>
 
-      <!--Top Content, Instagram-->
-      <div class="flex flex-wrap justify-between m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-        <div class="flex flex-col w-60 items-center">
-          <div class="bg-[linear-gradient(65deg,theme(colors.orange.300),theme(colors.red.400))] w-72 h-1 -translate-y-3"></div>
-          <div class="flex flex-row items-center">
-            <img src="./images/icon-instagram.svg" class="w-4 h-4 m-2">
-            <h1 class="text-sm text-gray-400">@realnathanf</h1>
-          </div>
-          <h1 class="font-bold text-6xl">11k</h1>
-          <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Followers</p>
-          <div>
-            <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
-            <span class="text-sm text-green-500 font-medium">1099 Today</span>
-          </div>
+      <!-- Instagram -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700 flex flex-col items-center">
+        <div class="bg-[linear-gradient(65deg,theme(colors.orange.300),theme(colors.red.400))] w-full h-1 -translate-y-3"></div>
+        <div class="flex flex-row items-center">
+          <img src="./images/icon-instagram.svg" class="w-4 h-4 m-2">
+          <h1 class="text-sm text-gray-400">@realnathanf</h1>
+        </div>
+        <h1 class="font-bold text-6xl">11k</h1>
+        <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Followers</p>
+        <div>
+          <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
+          <span class="text-sm text-green-500 font-medium">1099 Today</span>
         </div>
       </div>
 
-      <!--Top Content, YouTube-->
-      <div class="flex flex-wrap justify-between m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-        <div class="flex flex-col w-60 items-center">
-          <div class="bg-red-500 w-72 h-1 -translate-y-3 flex"></div>
-          <div class="flex flex-row items-center">
-            <img src="./images/icon-youtube.svg" class="w-4 h-4 m-2">
-            <h1 class="text-sm text-gray-400">Nathan F.</h1>
-          </div>
-          <h1 class="font-bold text-6xl">8239</h1>
-          <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Subscribers</p>
-          <div>
-            <img src="./images/icon-down.svg" class="w-2 h-2 inline m-1">
-            <span class="text-sm text-red-400 font-medium">144 Today</span>
-          </div>
+      <!-- YouTube -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700 flex flex-col items-center">
+        <div class="bg-red-500 w-full h-1 -translate-y-3 flex"></div>
+        <div class="flex flex-row items-center">
+          <img src="./images/icon-youtube.svg" class="w-4 h-4 m-2">
+          <h1 class="text-sm text-gray-400">Nathan F.</h1>
+        </div>
+        <h1 class="font-bold text-6xl">8239</h1>
+        <p class="text-sm font-medium text-gray-400 tracking-widest uppercase">Subscribers</p>
+        <div>
+          <img src="./images/icon-down.svg" class="w-2 h-2 inline m-1">
+          <span class="text-sm text-red-400 font-medium">144 Today</span>
         </div>
       </div>
     </div>
 
-    <!--Overall Content-->
-    <h1 class="flex flex-wrap w-2/3 text-lg font-bold m-1 p-6">Overview - Today</h1>
-      <!--Top Content-->
-     <div class="flex text-center">
-        <div class="flex flex-wrap justify-between m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-          <div class="flex flex-col w-60">
-            <div class="flex justify-between">
-              <h1 class="text-lg font-bold text-gray-400 ">Page Views</h1>
-              <img src="./images/icon-facebook.svg" class="w-5 h-5 inline m-1">
-            </div>
-            <div class="flex justify-between mt-2">
-              <h1 class="text-4xl font-bold">87</h1>
-              <div class="mt-3">
-                <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
-                <span class="text-sm text-green-500">3%</span>
-              </div>
-            </div>
-          </div>
-      </div>
+    <!-- Overall -->
+    <h1 class="w-full max-w-6xl text-lg font-bold py-6">Overview - Today</h1>
 
-      <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-          <div class="flex flex-col w-60">
-            <h1 class="text-lg font-bold">Likes</h1>
-            <h1 class="text-lg font-bold">52</h1>
-            <div>
-              <img src="./images/icon-down.svg" class="w-2 h-2 inline m-1">
-              <span class="text-sm text-red-400">2%</span>
-            </div>
+    <!-- Overview Top -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+      <!-- Overview Content, Facebook -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Page Views</h1>
+          <img src="./images/icon-facebook.svg" class="w-5 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">87</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-up.svg" class="w-2 h-2 mr-1">
+            <span class="text-sm text-green-500">3%</span>
+          </div>
         </div>
       </div>
 
-      <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-        <div class="flex flex-col w-60">
-          <h1 class="text-lg font-bold">Likes</h1>
-          <h1 class="text-lg font-bold">5462</h1>
-          <div>
-            <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Likes</h1>
+          <img src="./images/icon-facebook.svg" class="w-5 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">52</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-down.svg" class="w-2 h-2 mr-1">
+            <span class="text-sm text-red-400">2%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Content, Instagram -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Likes</h1>
+          <img src="./images/icon-instagram.svg" class="w-5 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">5462</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-up.svg" class="w-2 h-2 mr-1">
             <span class="text-sm text-green-500">2257%</span>
           </div>
         </div>
       </div>
 
-      <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-        <div class="flex flex-col w-60">
-          <h1 class="text-lg font-bold">Profile Views</h1>
-          <h1 class="text-lg font-bold">52K</h1>
-          <div>
-            <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Profile Views</h1>
+          <img src="./images/icon-instagram.svg" class="w-5 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">52K</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-up.svg" class="w-2 h-2 mr-1">
             <span class="text-sm text-green-500">1375%</span>
           </div>
         </div>
       </div>
     </div>
-    <!--Bottom Content-->
-      <div class="flex flex-wrap text-center">
-        <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-          <div class="flex flex-col w-60">
-            <h1 class="text-lg font-bold">Retweets</h1>
-            <h1 class="text-lg font-bold">117</h1>
-            <div>
-              <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
-              <span class="text-sm text-green-500">303%</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-          <div class="flex flex-col w-60">
-            <h1 class="text-lg font-bold">Likes</h1>
-            <h1 class="text-lg font-bold">507</h1>
-            <div>
-              <img src="./images/icon-up.svg" class="w-2 h-2 inline m-1">
-              <span class="text-sm text-green-500">553%</span>
-            </div>
-          </div>
+  <!-- Overview Bottom -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl pt-6">
+      <!-- Overview Content, Twitter -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Retweets</h1>
+          <img src="./images/icon-twitter.svg" class="w-6 h-5">
         </div>
-
-        <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-          <div class="flex flex-col w-60">
-            <h1 class="text-lg font-bold">Likes</h1>
-            <h1 class="text-lg font-bold">107</h1>
-            <div>
-              <img src="./images/icon-down.svg" class="w-2 h-2 inline m-1">
-              <span class="text-sm text-red-400">19%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap m-4 p-6 bg-gray-300 dark:bg-gray-800 rounded items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-          <div class="flex flex-col w-60">
-            <h1 class="text-lg font-bold">Total Views</h1>
-            <h1 class="text-lg font-bold">1407</h1>
-            <div>
-              <img src="./images/icon-down.svg" class="w-2 h-2 inline m-1">
-              <span class="text-sm text-red-400">12%</span>
-            </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">117</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-up.svg" class="w-2 h-2 mr-1">
+            <span class="text-sm text-green-500">303%</span>
           </div>
         </div>
       </div>
+
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Likes</h1>
+          <img src="./images/icon-twitter.svg" class="w-6 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">52</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-up.svg" class="w-2 h-2 mr-1">
+            <span class="text-sm text-green-500">553%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Content, Youtube -->
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Likes</h1>
+          <img src="./images/icon-youtube.svg" class="w-5 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">107</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-down.svg" class="w-2 h-2 mr-1">
+            <span class="text-sm text-red-400">19%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-300 dark:bg-gray-800 rounded p-6 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold text-gray-400">Total Views</h1>
+          <img src="./images/icon-youtube.svg" class="w-5 h-5">
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <h1 class="text-3xl sm:text-4xl font-bold">1407</h1>
+          <div class="flex items-center font-bold">
+            <img src="./images/icon-down.svg" class="w-2 h-2 mr-1">
+            <span class="text-sm text-red-400">12%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+    </div>
+    </div>
   </div>
   <script src="./index.js"></script>
 </body>
